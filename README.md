@@ -40,13 +40,7 @@ The final objective is to create an interactive 3D tour (Week 4 onwards).
 
 ## Environment Setup
 1. **Python version:** 3.10+
-2. **Create a virtual environment:**
-    ```bash
-    python -m venv venv
-    source venv/bin/activate   # Linux/Mac
-    venv\Scripts\activate      # Windows
-    ```
-3. **Install dependencies:**
+2. **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
@@ -74,25 +68,6 @@ The final objective is to create an interactive 3D tour (Week 4 onwards).
 - Triangulated new points to expand the 3D map.
 - Applied refinement (Bundle Adjustment) to reduce drift and improve reconstruction consistency.
 - **Output:** Refined multi-view sparse point cloud.
-
----
-
-## Running the Code
-1. Place your dataset images in the `images/` folder.
-2. Run feature matching for an image pair:
-    ```bash
-    python feature_matching.py --img1 images/img1.jpg --img2 images/img2.jpg
-    ```
-3. Run two-view reconstruction:
-    ```bash
-    python two_view_sfm.py --img1 images/img1.jpg --img2 images/img2.jpg --output output.ply
-    ```
-4. Run multi-view SfM (incremental reconstruction):
-    ```bash
-    python multi_view_sfm.py --img_dir images/ --output refined_output.ply
-    ```
-
----
 
 ## Output Visualization
 - **Feature Matches:** Images showing SIFT/ORB matches between image pairs.
